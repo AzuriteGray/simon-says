@@ -1,5 +1,7 @@
 
-
+p{ 
+  margin:0;
+}
 
 #piano{
   width:1200px;
@@ -15,11 +17,30 @@
 }
 
 .button {
-  border-radius: 50%;
-  font-size: 1.5em;
-  background-color: lightgray;
+  background-color:#DBDBDB;
+  border:none;
+  padding: 15px 32px;
+  border-radius:50%;
 }
 
+.options{
+  margin-top:7%;
+  margin-left:20%;
+  float:left;
+}
+
+.play{
+  margin-top:7%;
+  margin-right:18%;
+  float:right;
+}
+
+.power{
+  float:right;
+  margin-top:2%;
+  margin-right:5%;
+  padding:10px 10px;
+}
 .screen{
     height:150px;
     width:300px;
@@ -28,6 +49,7 @@
     margin-top:20px;
     font-family: 'Teko', sans-serif;
     font-size: 34px;
+    text-align: center;
 }
 
 
