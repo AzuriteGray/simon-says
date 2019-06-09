@@ -5,7 +5,6 @@ let turn;
 let good;
 let compTurn;
 let intervalId;
-let strict = false;
 let noise = true;
 let on = false;
 let win;
@@ -258,9 +257,8 @@ function check() {
             display.innerHTML = turn;
             clearColor();
             
-            if (strict) {
-                play();
-            } else {
+            
+             {
                 compTurn =true;
                 flash =0;
                 playerOrder =[];
