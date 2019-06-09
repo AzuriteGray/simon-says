@@ -6,7 +6,7 @@ let good;
 let compTurn;
 let intervalId;
 let noise = true;
-let on = false;
+let on = true;
 let win;
 
 const display = document.querySelector("#display");
@@ -42,6 +42,8 @@ function play(){
    intervalId = setInterval(gameTurn, 800);
 }
 
+console.log()
+
 function gameTurn() {
     on = false;
     
@@ -73,7 +75,7 @@ function one() {
         audio.play();
     }
     noise = true;
-    noteC.style.backgroundColor = "lightgreen";
+    noteC.style.backgroundColor = "#FF0000";
 }
 
 function two() {
@@ -82,7 +84,7 @@ function two() {
         audio.play();
     }
     noise = true;
-    noteD.style.backgroundColor = "tomato";
+    noteD.style.backgroundColor = "#FF7F00";
 }
 
 function three() {
@@ -91,7 +93,7 @@ function three() {
         audio.play();
     }
     noise = true;
-    noteE.style.backgroundColor = "yellow";
+    noteE.style.backgroundColor = "#FFFF00";
 }
 
 function four() {
@@ -100,34 +102,34 @@ function four() {
         audio.play();
     }
     noise = true;
-    noteF.style.backgroundColor = "lightskyblue";
+    noteF.style.backgroundColor = "#00FF00";
 }
 
 function five() {
     if (noise) {
-        let audio = document.getElementById("clip4");
+        let audio = document.getElementById("clip5");
         audio.play();
     }
     noise = true;
-    noteG.style.backgroundColor = "lightskyblue";
+    noteG.style.backgroundColor = "0000FF";
 }
 
 function six() {
     if (noise) {
-        let audio = document.getElementById("clip4");
+        let audio = document.getElementById("clip6");
         audio.play();
     }
     noise = true;
-    noteA.style.backgroundColor = "lightskyblue";
+    noteA.style.backgroundColor = "#4B0082";
 }
 
 function seven() {
     if (noise) {
-        let audio = document.getElementById("clip4");
+        let audio = document.getElementById("clip7");
         audio.play();
     }
     noise = true;
-    noteB.style.backgroundColor = "lightskyblue";
+    noteB.style.backgroundColor = "#8B00FF";
 }
 
 function clearColor() {
