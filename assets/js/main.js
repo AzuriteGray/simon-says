@@ -131,23 +131,23 @@ function seven() {
 }
 
 function clearColor() {
-     noteC.style.backgroundColor = "darkgreen";
-     noteD.style.backgroundColor = "darkred";
-     noteE.style.backgroundColor = "goldenrod";
-     noteF.style.backgroundColor = "darkblue";
-     noteG.style.backgroundColor = "darkblue";
-     noteA.style.backgroundColor = "darkblue";
-     noteB.style.backgroundColor = "darkblue";
+     noteC.style.backgroundColor = "#f5f5f5";
+     noteD.style.backgroundColor = "#f5f5f5";
+     noteE.style.backgroundColor = "#f5f5f5";
+     noteF.style.backgroundColor = "#f5f5f5";
+     noteG.style.backgroundColor = "#f5f5f5";
+     noteA.style.backgroundColor = "#f5f5f5";
+     noteB.style.backgroundColor = "#f5f5f5";
  }
  
 function flashColor() {
-     noteC.style.backgroundColor = "lightgreen";
-     noteD.style.backgroundColor = "tomato";
-     noteE.style.backgroundColor = "yellow";
-     noteF.style.backgroundColor = "lightskyblue";
-     noteG.style.backgroundColor = "lightskyblue";
-     noteA.style.backgroundColor = "lightskyblue";
-     noteB.style.backgroundColor = "lightskyblue";
+     noteC.style.backgroundColor = "#FF0000";
+     noteD.style.backgroundColor = "#FF7F00";
+     noteE.style.backgroundColor = "#FFFF00";
+     noteF.style.backgroundColor = "#00FF00";
+     noteG.style.backgroundColor = "#0000FF";
+     noteA.style.backgroundColor = "#4B0082";
+     noteB.style.backgroundColor = "#8B00FF";
  }
  
 noteC.addEventListener('click', (event) => {
