@@ -29,6 +29,8 @@ startButton.addEventListener('click', (event) => {
       play();
 });
 
+
+
 function play(){
    win = false;
    order = [];
@@ -297,4 +299,34 @@ function winGame(){
 
 optionsButton.addEventListener('click', (event) => {
       display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
+});
+
+
+easy.addEventListener('click', (event) => {
+    easy=true;
+    normal=false;
+    hard=false;
+    Vhard=false;
+    display.innerHTML ="<p>4 notes will be used</p>";
+});
+
+normal.addEventListener('click', (event) => {
+    easy=false;
+    normal=true;
+    hard=false;
+    Vhard=false;
+});
+
+hard.addEventListener('click', (event) => {
+    easy=false;
+    normal=false;
+    hard=true;
+    Vhard=false;
+});
+
+Vhard.addEventListener('click', (event) => {
+    easy=false;
+    normal=false;
+    hard=false;
+    Vhard=true;
 });
