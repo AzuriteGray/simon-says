@@ -93,6 +93,17 @@ p{
   0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
   
+.difficulty{
+  background-color:lightgreen;
+  border:none;
+  padding-left:15px;
+  padding-right:15px;
+  font-size:32px;
+  font-family: 'Teko', sans-serif;
+  }
+  
+  
+  
 @media (max-width: 768px){
   #piano{
   width:700px;
@@ -104,11 +115,21 @@ p{
     width:150px;
     margin-left:40%;
     margin-top:10px;
+    font-size:24px;
   }
   
   #piano-container {
   width:95%;
   height:60%;
   margin-top:20px;
+  }
+  
+  .difficulty{
+  background-color:lightgreen;
+  border:none;
+  padding-left:7px;
+  padding-right:7px;
+  font-size:17px;
+  
   }
 }

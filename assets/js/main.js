@@ -18,7 +18,11 @@ const noteG = document.querySelector("#noteG");
 const noteA = document.querySelector("#noteA");
 const noteB = document.querySelector("#noteB");
 const startButton = document.querySelector("#start");
-
+const optionsButton = document.querySelector("#options");
+const easy = document.querySelector("#easy");
+const normal = document.querySelector("#normal");
+const hard = document.querySelector("#hard");
+const Vhard = document.querySelector("#very hard");
 
 
 startButton.addEventListener('click', (event) => {
@@ -38,11 +42,11 @@ function play(){
        order.push(Math.floor(Math.random() * 7) + 1);
    }
    compTurn = true;
-   
+   startButton.disabled = true;
+   optionsButton.disabled=true;
    intervalId = setInterval(gameTurn, 800);
 }
 
-console.log()
 
 function gameTurn() {
     on = false;
@@ -111,7 +115,7 @@ function five() {
         audio.play();
     }
     noise = true;
-    noteG.style.backgroundColor = "0000FF";
+    noteG.style.backgroundColor = "#0000FF";
 }
 
 function six() {
@@ -287,4 +291,10 @@ function winGame(){
     display.innerHTML = "WIN!";
     on = false;
     win = true;
+    startButton.disabled = false;
+   optionsButton.disabled=false;
 }
+
+optionsButton.addEventListener('click', (event) => {
+      display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
+});
