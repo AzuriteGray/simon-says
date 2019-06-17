@@ -315,6 +315,7 @@ normal.addEventListener('click', (event) => {
     normal=true;
     hard=false;
     Vhard=false;
+    display.innerHTML ="<p>5 notes will be used</p>";
 });
 
 hard.addEventListener('click', (event) => {
@@ -322,6 +323,7 @@ hard.addEventListener('click', (event) => {
     normal=false;
     hard=true;
     Vhard=false;
+    display.innerHTML ="<p>6 notes will be used</p>";
 });
 
 Vhard.addEventListener('click', (event) => {
@@ -329,4 +331,6 @@ Vhard.addEventListener('click', (event) => {
     normal=false;
     hard=false;
     Vhard=true;
+    display.innerHTML ="<p>7 notes will be used</p>";
 });
+

@@ -102,7 +102,9 @@ p{
   font-family: 'Teko', sans-serif;
   }
   
-  
+.hidden{
+  display:none;
+}
   
 @media (max-width: 768px){
   #piano{
