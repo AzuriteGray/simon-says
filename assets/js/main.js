@@ -23,7 +23,15 @@ const easy = document.querySelector("#easy");
 const normal = document.querySelector("#normal");
 const hard = document.querySelector("#hard");
 const Vhard = document.querySelector("#very hard");
-
+const keys = {
+    noteA: {color:"#4B0082", clip:"clip6"},
+    noteB: {color:"#8B00FF", clip:"clip7"},
+    noteC: {color:"#FF0000", clip:"clip1"},
+    noteD: {color:"#FF7F00", clip:"clip2"},
+    noteE: {color:"#FFFF00", clip:"clip3"},
+    noteF: {color:"#00FF00", clip:"clip4"},
+    noteG: {color:"#0000FF", clip:"clip5"},
+};
 
 startButton.addEventListener('click', (event) => {
       play();
@@ -63,80 +71,47 @@ function gameTurn() {
     if (compTurn) {
         clearColor();
         setTimeout(() => {
-            if (order[flash] == 1) one();
-            if (order[flash] == 2) two();
-            if (order[flash] == 3) three();
-            if (order[flash] == 4) four();
-            if (order[flash] == 5) five();
-            if (order[flash] == 6) six();
-            if (order[flash] == 7) seven();
+            if (order[flash] == 1) {
+                const {color, clip } = keys.noteC;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 2) {
+                const {color, clip } = keys.noteD;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 3) {
+                const {color, clip } = keys.noteE;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 4) {
+                const {color, clip } = keys.noteF;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 5) {
+                const {color, clip } = keys.noteG;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 6) {
+                const {color, clip } = keys.noteA;
+                notePressSucsess(noteC,color,clip);
+            }
+            if (order[flash] == 7) {
+                const {color, clip } = keys.noteB;
+                notePressSucsess(noteC,color,clip);
+            }
             flash++;
         }, 200);
     }
 }
 
-function one() {
-    if (noise) {
-        let audio = document.getElementById("clip1");
-        audio.play();
-    }
-    noise = true;
-    noteC.style.backgroundColor = "#FF0000";
+function notePressSucsess(note,color,clip) {
+    let audio =  document.getElementById(clip);
+    audio.play();
+    note.style.backgroundColor = color;
 }
 
-function two() {
-    if (noise) {
-        let audio = document.getElementById("clip2");
-        audio.play();
-    }
-    noise = true;
-    noteD.style.backgroundColor = "#FF7F00";
-}
 
-function three() {
-    if (noise) {
-        let audio = document.getElementById("clip3");
-        audio.play();
-    }
-    noise = true;
-    noteE.style.backgroundColor = "#FFFF00";
-}
 
-function four() {
-    if (noise) {
-        let audio = document.getElementById("clip4");
-        audio.play();
-    }
-    noise = true;
-    noteF.style.backgroundColor = "#00FF00";
-}
-
-function five() {
-    if (noise) {
-        let audio = document.getElementById("clip5");
-        audio.play();
-    }
-    noise = true;
-    noteG.style.backgroundColor = "#0000FF";
-}
-
-function six() {
-    if (noise) {
-        let audio = document.getElementById("clip6");
-        audio.play();
-    }
-    noise = true;
-    noteA.style.backgroundColor = "#4B0082";
-}
-
-function seven() {
-    if (noise) {
-        let audio = document.getElementById("clip7");
-        audio.play();
-    }
-    noise = true;
-    noteB.style.backgroundColor = "#8B00FF";
-}
 
 function clearColor() {
      noteC.style.backgroundColor = "#f5f5f5";
@@ -157,12 +132,16 @@ function flashColor() {
      noteA.style.backgroundColor = "#4B0082";
      noteB.style.backgroundColor = "#8B00FF";
  }
- 
+
+
+
+
 noteC.addEventListener('click', (event) => {
+    const { color, clip } = keys.noteC;
     if (on) {
         playerOrder.push(1);
         check();
-        one();
+        notePressSucsess(noteC,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -172,10 +151,11 @@ noteC.addEventListener('click', (event) => {
 });
 
 noteD.addEventListener('click', (event) => {
+     const { color, clip } = keys.noteD;
     if (on) {
         playerOrder.push(2);
         check();
-        two();
+        notePressSucsess(noteD,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -185,10 +165,11 @@ noteD.addEventListener('click', (event) => {
 });
 
 noteE.addEventListener('click', (event) => {
+     const { color, clip } = keys.noteE;
     if (on) {
         playerOrder.push(3);
         check();
-        three();
+        notePressSucsess(noteE,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -198,10 +179,11 @@ noteE.addEventListener('click', (event) => {
 });
 
 noteF.addEventListener('click', (event) => {
+     const { color, clip } = keys.noteF;
     if (on) {
         playerOrder.push(4);
         check();
-        four();
+        notePressSucsess(noteF,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -210,11 +192,12 @@ noteF.addEventListener('click', (event) => {
     }
 });
 
-noteG.addEventListener('click', (event) => {
+noteG.addEventListener('click', (event) => { 
+    const { color, clip } = keys.noteG;
     if (on) {
         playerOrder.push(5);
         check();
-        five();
+        notePressSucsess(noteG,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -224,10 +207,11 @@ noteG.addEventListener('click', (event) => {
 });
 
 noteA.addEventListener('click', (event) => {
+     const { color, clip } = keys.noteA;
     if (on) {
         playerOrder.push(6);
         check();
-        six();
+        notePressSucsess(noteA,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -237,10 +221,11 @@ noteA.addEventListener('click', (event) => {
 });
 
 noteB.addEventListener('click', (event) => {
+     const { color, clip } = keys.noteB;
     if (on) {
         playerOrder.push(7);
         check();
-        seven();
+        notePressSucsess(noteB,color,clip);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -333,4 +318,5 @@ Vhard.addEventListener('click', (event) => {
     Vhard=true;
     display.innerHTML ="<p>7 notes will be used</p>";
 });
+
 
