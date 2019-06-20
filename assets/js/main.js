@@ -8,6 +8,7 @@ let intervalId;
 let noise = true;
 let on = true;
 let win;
+let gameStarted = false;
 
 const display = document.querySelector("#display");
 const noteC = document.querySelector("#noteC");
@@ -40,6 +41,7 @@ startButton.addEventListener('click', (event) => {
 
 
 function play(){
+   gameStarted=true;
    win = false;
    order = [];
    playerOrder = [];
@@ -77,27 +79,27 @@ function gameTurn() {
             }
             if (order[flash] == 2) {
                 const {color, clip } = keys.noteD;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteD,color,clip);
             }
             if (order[flash] == 3) {
                 const {color, clip } = keys.noteE;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteE,color,clip);
             }
             if (order[flash] == 4) {
                 const {color, clip } = keys.noteF;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteF,color,clip);
             }
             if (order[flash] == 5) {
                 const {color, clip } = keys.noteG;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteG,color,clip);
             }
             if (order[flash] == 6) {
                 const {color, clip } = keys.noteA;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteA,color,clip);
             }
             if (order[flash] == 7) {
                 const {color, clip } = keys.noteB;
-                notePressSucsess(noteC,color,clip);
+                notePressSucsess(noteB,color,clip);
             }
             flash++;
         }, 200);
@@ -108,6 +110,7 @@ function notePressSucsess(note,color,clip) {
     let audio =  document.getElementById(clip);
     audio.play();
     note.style.backgroundColor = color;
+    
 }
 
 
@@ -137,6 +140,7 @@ function flashColor() {
 
 
 noteC.addEventListener('click', (event) => {
+    if (gameStarted) {
     const { color, clip } = keys.noteC;
     if (on) {
         playerOrder.push(1);
@@ -148,10 +152,12 @@ noteC.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
 noteD.addEventListener('click', (event) => {
-     const { color, clip } = keys.noteD;
+    if (gameStarted) {
+    const { color, clip } = keys.noteD;
     if (on) {
         playerOrder.push(2);
         check();
@@ -162,10 +168,12 @@ noteD.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
 noteE.addEventListener('click', (event) => {
-     const { color, clip } = keys.noteE;
+    if (gameStarted) {
+    const { color, clip } = keys.noteE;
     if (on) {
         playerOrder.push(3);
         check();
@@ -176,9 +184,11 @@ noteE.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
 noteF.addEventListener('click', (event) => {
+    if (gameStarted) {
      const { color, clip } = keys.noteF;
     if (on) {
         playerOrder.push(4);
@@ -190,9 +200,11 @@ noteF.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
-noteG.addEventListener('click', (event) => { 
+noteG.addEventListener('click', (event) => {
+    if (gameStarted) {
     const { color, clip } = keys.noteG;
     if (on) {
         playerOrder.push(5);
@@ -204,9 +216,11 @@ noteG.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
 noteA.addEventListener('click', (event) => {
+    if (gameStarted) {
      const { color, clip } = keys.noteA;
     if (on) {
         playerOrder.push(6);
@@ -218,9 +232,11 @@ noteA.addEventListener('click', (event) => {
             },300);
         }
     }
+    }
 });
 
 noteB.addEventListener('click', (event) => {
+    if (gameStarted) {
      const { color, clip } = keys.noteB;
     if (on) {
         playerOrder.push(7);
@@ -231,6 +247,7 @@ noteB.addEventListener('click', (event) => {
                 clearColor();
             },300);
         }
+    }
     }
 });
 
