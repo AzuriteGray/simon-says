@@ -10,6 +10,7 @@ let on = true;
 let win;
 let gameStarted = false;
 
+
 const display = document.querySelector("#display");
 const noteC = document.querySelector("#noteC");
 const noteD = document.querySelector("#noteD");
@@ -346,4 +347,3 @@ Vhard.addEventListener('click', (event) => {
 });
 
 
-emitter.setMaxListeners(150)
