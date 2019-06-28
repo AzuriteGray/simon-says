@@ -23,7 +23,7 @@ const optionsButton = document.querySelector("#options");
 const easy = document.querySelector("#easy");
 const normal = document.querySelector("#normal");
 const hard = document.querySelector("#hard");
-const Vhard = document.querySelector("#very hard");
+const Vhard = document.querySelector("#veryHard");
 const keys = {
     noteA: {color:"#4B0082", clip:"clip6"},
     noteB: {color:"#8B00FF", clip:"clip7"},
@@ -39,6 +39,8 @@ startButton.addEventListener('click', (event) => {
 });
 
 
+
+// randomizer
 
 function play(){
    gameStarted=true;
@@ -59,6 +61,7 @@ function play(){
    intervalId = setInterval(gameTurn, 800);
 }
 
+//computer turn 
 
 function gameTurn() {
     on = false;
@@ -113,8 +116,7 @@ function notePressSucsess(note,color,clip) {
     
 }
 
-
-
+//pressed key colors
 
 function clearColor() {
      noteC.style.backgroundColor = "#f5f5f5";
@@ -137,7 +139,7 @@ function flashColor() {
  }
 
 
-
+//player pressing keys
 
 noteC.addEventListener('click', (event) => {
     if (gameStarted) {
@@ -251,6 +253,7 @@ noteB.addEventListener('click', (event) => {
     }
 });
 
+//checking if the game is won or computer turn again
 
 function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length -1]) 
@@ -290,6 +293,8 @@ function check() {
     }
 }
 
+//win conditions check
+
 function winGame(){
     flashColor();
     display.innerHTML = "WIN!";
@@ -299,10 +304,14 @@ function winGame(){
    optionsButton.disabled=false;
 }
 
+//options button
+
 optionsButton.addEventListener('click', (event) => {
       display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
 });
 
+
+//dificulty selector
 
 easy.addEventListener('click', (event) => {
     easy=true;
@@ -337,3 +346,4 @@ Vhard.addEventListener('click', (event) => {
 });
 
 
+emitter.setMaxListeners(150)
