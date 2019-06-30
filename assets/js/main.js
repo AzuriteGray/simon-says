@@ -9,7 +9,7 @@ let noise = true;
 let on = true;
 let win;
 let gameStarted = false;
-let difficulty = "";
+let difficulty = "Vhard";
 
 const display = document.querySelector("#display");
 const noteC = document.querySelector("#noteC");
@@ -21,10 +21,10 @@ const noteA = document.querySelector("#noteA");
 const noteB = document.querySelector("#noteB");
 const startButton = document.querySelector("#start");
 const optionsButton = document.querySelector("#options");
-const easy = document.querySelector("#easy");
-const normal = document.querySelector("#normal");
-const hard = document.querySelector("#hard");
-const Vhard = document.querySelector("#veryHard");
+const note4 = document.querySelector("#easy");
+const note5 = document.querySelector("#normal");
+const note6 = document.querySelector("#hard");
+const note7 = document.querySelector("#veryHard");
 const keys = {
     noteA: {color:"#4B0082", clip:"clip6"},
     noteB: {color:"#8B00FF", clip:"clip7"},
@@ -34,6 +34,8 @@ const keys = {
     noteF: {color:"#00FF00", clip:"clip4"},
     noteG: {color:"#0000FF", clip:"clip5"},
 };
+
+
 
 startButton.addEventListener('click', (event) => {
       play();
@@ -48,27 +50,52 @@ optionsButton.addEventListener('click', (event) => {
 
 //dificulty selector
 
-easy.addEventListener('click', (event) => {
+note4.addEventListener('click', (event) => {
     difficulty = easy;
     display.innerHTML ="<p>4 notes will be used</p>";
 });
 
-normal.addEventListener('click', (event) => {
+note5.addEventListener('click', (event) => {
     difficulty = normal;
     display.innerHTML ="<p>5 notes will be used</p>";
 });
 
-hard.addEventListener('click', (event) => {
+note6.addEventListener('click', (event) => {
     difficulty = hard;
     display.innerHTML ="<p>6 notes will be used</p>";
 });
 
-Vhard.addEventListener('click', (event) => {
+note7.addEventListener('click', (event) => {
     difficulty = Vhard;
     display.innerHTML ="<p>7 notes will be used</p>";
 });
 
 // randomizer
+
+function easy(){
+    for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 4) + 1);
+}
+}
+
+function normal () {
+     for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 5) + 1);
+   }
+}
+
+function hard (){
+    for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 6) + 1);
+   }
+}
+
+function Vhard () {
+     for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 7) + 1);
+   }
+}
+
 
 function play(){
    gameStarted=true;
@@ -81,21 +108,13 @@ function play(){
    display.innerHTML = 1;
    good = true;
    if (difficulty == easy){
-       for (var i = 0; i < 20; i++) {
-       order.push(Math.floor(Math.random() * 4) + 1);
-   }
+       easy();
    } else if (difficulty == normal) {
-       for (var i = 0; i < 20; i++) {
-       order.push(Math.floor(Math.random() * 5) + 1);
-   }
+      normal();
    } else if (difficulty == hard) {
-       for (var i = 0; i < 20; i++) {
-       order.push(Math.floor(Math.random() * 6) + 1);
-   }
+       hard();
    } else if (difficulty == Vhard) {
-       for (var i = 0; i < 20; i++) {
-       order.push(Math.floor(Math.random() * 7) + 1);
-   }
+      Vhard();
    }
    compTurn = true;
    startButton.disabled = true;
