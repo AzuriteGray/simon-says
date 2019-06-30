@@ -9,7 +9,7 @@ let noise = true;
 let on = true;
 let win;
 let gameStarted = false;
-
+let difficulty = "";
 
 const display = document.querySelector("#display");
 const noteC = document.querySelector("#noteC");
@@ -39,7 +39,34 @@ startButton.addEventListener('click', (event) => {
       play();
 });
 
+//options button
 
+optionsButton.addEventListener('click', (event) => {
+      display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
+});
+
+
+//dificulty selector
+
+easy.addEventListener('click', (event) => {
+    difficulty = easy;
+    display.innerHTML ="<p>4 notes will be used</p>";
+});
+
+normal.addEventListener('click', (event) => {
+    difficulty = normal;
+    display.innerHTML ="<p>5 notes will be used</p>";
+});
+
+hard.addEventListener('click', (event) => {
+    difficulty = hard;
+    display.innerHTML ="<p>6 notes will be used</p>";
+});
+
+Vhard.addEventListener('click', (event) => {
+    difficulty = Vhard;
+    display.innerHTML ="<p>7 notes will be used</p>";
+});
 
 // randomizer
 
@@ -53,8 +80,22 @@ function play(){
    turn = 1;
    display.innerHTML = 1;
    good = true;
-   for (var i = 0; i < 20; i++) {
+   if (difficulty == easy){
+       for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 4) + 1);
+   }
+   } else if (difficulty == normal) {
+       for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 5) + 1);
+   }
+   } else if (difficulty == hard) {
+       for (var i = 0; i < 20; i++) {
+       order.push(Math.floor(Math.random() * 6) + 1);
+   }
+   } else if (difficulty == Vhard) {
+       for (var i = 0; i < 20; i++) {
        order.push(Math.floor(Math.random() * 7) + 1);
+   }
    }
    compTurn = true;
    startButton.disabled = true;
@@ -305,45 +346,6 @@ function winGame(){
    optionsButton.disabled=false;
 }
 
-//options button
 
-optionsButton.addEventListener('click', (event) => {
-      display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
-});
-
-
-//dificulty selector
-
-easy.addEventListener('click', (event) => {
-    easy=true;
-    normal=false;
-    hard=false;
-    Vhard=false;
-    display.innerHTML ="<p>4 notes will be used</p>";
-});
-
-normal.addEventListener('click', (event) => {
-    easy=false;
-    normal=true;
-    hard=false;
-    Vhard=false;
-    display.innerHTML ="<p>5 notes will be used</p>";
-});
-
-hard.addEventListener('click', (event) => {
-    easy=false;
-    normal=false;
-    hard=true;
-    Vhard=false;
-    display.innerHTML ="<p>6 notes will be used</p>";
-});
-
-Vhard.addEventListener('click', (event) => {
-    easy=false;
-    normal=false;
-    hard=false;
-    Vhard=true;
-    display.innerHTML ="<p>7 notes will be used</p>";
-});
 
 
