@@ -9,7 +9,7 @@ let noise = true;
 let on = true;
 let win;
 let gameStarted = false;
-let difficulty = "Vhard";
+let difficulty = Vhard ;
 
 const display = document.querySelector("#display");
 const noteC = document.querySelector("#noteC");
@@ -20,7 +20,10 @@ const noteG = document.querySelector("#noteG");
 const noteA = document.querySelector("#noteA");
 const noteB = document.querySelector("#noteB");
 const startButton = document.querySelector("#start");
-const optionsButton = document.querySelector("#options");
+const easyButton = document.querySelector("#easy");
+const normalButton = document.querySelector("#normal");
+const hardButton = document.querySelector("#hard");
+const VhardButton = document.querySelector("#veryHard");
 const note4 = document.querySelector("#easy");
 const note5 = document.querySelector("#normal");
 const note6 = document.querySelector("#hard");
@@ -39,12 +42,6 @@ const keys = {
 
 startButton.addEventListener('click', (event) => {
       play();
-});
-
-//options button
-
-optionsButton.addEventListener('click', (event) => {
-      display.innerHTML ="<div class='setting'><p>difficulty</p><button id='easy' class='difficulty'>4 Notes</button><button id='normal' class='difficulty'>5 Notes</button><button id='hard' class='difficulty'>6 Notes</button><button id='very hard' class='difficulty'>7 Notes</button> </div>";
 });
 
 
@@ -118,9 +115,13 @@ function play(){
    }
    compTurn = true;
    startButton.disabled = true;
-   optionsButton.disabled=true;
+   easyButton.disabled=true;
+   normalButton.disabled=true;
+   hardButton.disabled=true;
+   VhardButton.disabled=true;
    intervalId = setInterval(gameTurn, 800);
-}
+} 
+
 
 //computer turn 
 
@@ -362,7 +363,10 @@ function winGame(){
     on = false;
     win = true;
     startButton.disabled = false;
-   optionsButton.disabled=false;
+   easyButton.disabled=false;
+   normalButton.disabled=false;
+   hardButton.disabled=false;
+   VhardButton.disabled=false;
 }
 
 

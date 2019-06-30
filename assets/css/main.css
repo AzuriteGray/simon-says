@@ -23,11 +23,6 @@ p{
   border-radius:50%;
 }
 
-.options{
-  margin-top:7%;
-  margin-left:20%;
-  float:left;
-}
 
 .play{
   margin-top:7%;
@@ -92,7 +87,17 @@ p{
   0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25),
   0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-  
+
+
+.setting{
+  margin-top: 10px;
+  margin-left:50px;
+  width:150px;
+  float:left;
+  color:white;
+  text-align: center;
+}
+
 .difficulty{
   background-color:lightgreen;
   border:none;
@@ -100,6 +105,9 @@ p{
   padding-right:15px;
   font-size:32px;
   font-family: 'Teko', sans-serif;
+  margin-top:7%;
+  background: radial-gradient(circle, rgba(215,215,215,1) 0%, rgba(122,122,122,1) 100%);
+  border-radius:15%;
   }
   
 .hidden{
