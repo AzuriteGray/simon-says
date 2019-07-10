@@ -54,11 +54,10 @@ p{
   background:#fff;
   margin:60px auto 0 auto;
 }
-#piano-container li {
+.key-container {
   width:14.28%;
   height:100%;
   float:left;
-  list-style-type:none;
   position:relative;
 }
 
