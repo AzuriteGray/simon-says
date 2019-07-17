@@ -395,7 +395,7 @@ function winGame(){
 //noteA.play(440.00, now + 250);       //A
 //noteB.play(493.88, now + 300);         //B
 
-const soundE = new Audio('audio/noteB')
+const soundE = new Audio('audio/noteB.wav')
 
 soundE.play()
 console.log(soundE)
