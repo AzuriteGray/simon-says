@@ -5,7 +5,6 @@ let turn;
 let good;
 let compTurn;
 let intervalId;
-let noise = true;
 let on = true;
 let win;
 let gameStarted = false;
@@ -372,3 +371,24 @@ function winGame(){
 
 
 
+
+//audio tests
+
+var context = new (window.AudioContext || window.webkitAudioContext)();
+
+var oscillator = context.createOscillator();
+
+oscillator.type = 'sine';
+oscillator.frequency.value = 440;
+oscillator.connect(context.destination);
+oscillator.start();
+
+
+
+note.play(261.63, now);             //C
+note.play(293.66, now + 0.5);       //D
+note.play(329.63, now + 1);         //E
+note.play(349.23, now + 1.5);       //F
+note.play(392.00, now + 2);         //G
+note.play(440.00, now + 2.5);       //A
+note.play(493.88, now + 3);         //B
