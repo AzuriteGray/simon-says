@@ -9,7 +9,7 @@ let on = true;
 let win;
 let gameStarted = false;
 let difficulty = Vhard ;
-
+var lives = 3;
 
 const display = document.querySelector("#display");
 const keyC = document.querySelector("#noteC");
@@ -332,13 +332,15 @@ function check() {
             display.innerHTML = turn;
             clearColor();
             
-            
-             {
+             lives--;
+             if (lives){
                 compTurn =true;
                 flash =0;
                 playerOrder =[];
                 good =true;
                 intervalId = setInterval(gameTurn, 800);
+            } else {
+                gameover();
             }
         },800);
     }
@@ -354,6 +356,17 @@ function check() {
 }
 
 //win conditions check
+
+function gameover (){
+    display.innerHTML = "GAME OVER!";
+    on = false;
+    win = true;
+    startButton.disabled = false;
+   easyButton.disabled=false;
+   normalButton.disabled=false;
+   hardButton.disabled=false;
+   VhardButton.disabled=false;
+}
 
 function winGame(){
     flashColor();
