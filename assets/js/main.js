@@ -29,13 +29,13 @@ const note5 = document.querySelector("#normal");
 const note6 = document.querySelector("#hard");
 const note7 = document.querySelector("#veryHard");
 const keys = {
-    noteA: {color:"#4B0082", clip:"../audio/noteA.wav"},
-    noteB: {color:"#8B00FF", clip:"../audio/noteB.wav"},
-    noteC: {color:"#FF0000", clip:"../audio/noteC.wav"},
-    noteD: {color:"#FF7F00", clip:"../audio/noteD.wav"},
-    noteE: {color:"#FFFF00", clip:"../audio/noteE.wav"},
-    noteF: {color:"#00FF00", clip:"../audio/noteF.wav"},
-    noteG: {color:"#0000FF", clip:"../audio/noteG.wav"},
+    noteA: {color:"#4B0082", clip:"assets/audio/noteA.wav"},
+    noteB: {color:"#8B00FF", clip:"assets/audio/noteB.wav"},
+    noteC: {color:"#FF0000", clip:"assets/audio/noteC.wav"},
+    noteD: {color:"#FF7F00", clip:"assets/audio/noteD.wav"},
+    noteE: {color:"#FFFF00", clip:"assets/audio/noteE.wav"},
+    noteF: {color:"#00FF00", clip:"assets/audio/noteF.wav"},
+    noteG: {color:"#0000FF", clip:"assets/audio/noteG.wav"},
 };
 
 
