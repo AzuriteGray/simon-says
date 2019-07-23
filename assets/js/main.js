@@ -326,13 +326,14 @@ function check() {
     }
      
     if (good==false) {
+        lives--;
         flashColor();
-        display.innerHTML = "WRONG!";
+        display.innerHTML = "<p>WRONG!</p><p>lifes left</p>"+lives;
         setTimeout(() => {
             display.innerHTML = turn;
             clearColor();
             
-             lives--;
+             
              if (lives){
                 compTurn =true;
                 flash =0;
