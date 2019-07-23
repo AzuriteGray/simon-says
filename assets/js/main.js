@@ -29,13 +29,13 @@ const note5 = document.querySelector("#normal");
 const note6 = document.querySelector("#hard");
 const note7 = document.querySelector("#veryHard");
 const keys = {
-    noteA: {color:"#4B0082", clip:"clip6"},
+    noteA: {color:"#4B0082", clip:"../audio/noteA.wav"},
     noteB: {color:"#8B00FF", clip:"../audio/noteB.wav"},
-    noteC: {color:"#FF0000", clip:"clip1"},
-    noteD: {color:"#FF7F00", clip:"clip2"},
-    noteE: {color:"#FFFF00", clip:"clip3"},
-    noteF: {color:"#00FF00", clip:"clip4"},
-    noteG: {color:"#0000FF", clip:"clip5"},
+    noteC: {color:"#FF0000", clip:"../audio/noteC.wav"},
+    noteD: {color:"#FF7F00", clip:"../audio/noteD.wav"},
+    noteE: {color:"#FFFF00", clip:"../audio/noteE.wav"},
+    noteF: {color:"#00FF00", clip:"../audio/noteF.wav"},
+    noteG: {color:"#0000FF", clip:"../audio/noteG.wav"},
 };
 
 
@@ -172,7 +172,7 @@ function gameTurn() {
 }
 
 function notePressSucsess(note,color,clip) {
-    let audio= new Audio(clip)
+    let audio= new Audio(clip);
     audio.play();
     note.style.backgroundColor = color;
     
@@ -327,7 +327,7 @@ function check() {
      
     if (good==false) {
         flashColor();
-        display.innerHTML = "NO!";
+        display.innerHTML = "WRONG!";
         setTimeout(() => {
             display.innerHTML = turn;
             clearColor();
@@ -341,8 +341,6 @@ function check() {
                 intervalId = setInterval(gameTurn, 800);
             }
         },800);
-        
-        noise = false;
     }
     
     if (turn == playerOrder.length && good && !win) {
@@ -359,7 +357,7 @@ function check() {
 
 function winGame(){
     flashColor();
-    display.innerHTML = "WIN!";
+    display.innerHTML = "Congratulations!";
     on = false;
     win = true;
     startButton.disabled = false;
@@ -395,8 +393,8 @@ function winGame(){
 //noteA.play(440.00, now + 250);       //A
 //noteB.play(493.88, now + 300);         //B
 
-const soundE = new Audio('audio/noteB.wav')
+//const soundE = new Audio('audio/noteB.wav')
 
-soundE.play()
-console.log(soundE)
+//soundE.play()
+//console.log(soundE)
 
