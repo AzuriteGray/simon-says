@@ -1,6 +1,11 @@
 # Simons Keyboard
 
-
+after playing numerous simon says games i came to the conclusion that they where all to similar and to easy, 
+so i set out to make something harder with a slightly diffrent look to it while keeping the base game the same.
+The reason behind using a keyboard was quite simple becasue quite like simon says you have keys that make noise
+except there is more of them wich can be used to in crease the difficulty. To ensure it is still fun for everyone
+i made it so that you can choose the amount of notes you would like to use so it can be like normal simon says
+with just for keys or quite a bit harder with 7 notes.
 
 ## UX
 

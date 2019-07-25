@@ -382,33 +382,3 @@ function winGame(){
 }
 
 
-
-
-
-//audio tests
-
-//var context = new (window.AudioContext || window.webkitAudioContext)();
-
-//var oscillator = context.createOscillator();
-
-//oscillator.type = 'sine';
-//oscillator.frequency.value = 440;
-//oscillator.connect(context.destination);
-//oscillator.start();
-
-//var date = new Date();
-//var now = date.getTime();
-
-//noteC.play(261.63, now);             //C
-//noteD.play(293.66, now + 50);       //D
-//noteE.play(329.63, now + 100);         //E
-//noteF.play(349.23, now + 150);       //F
-//noteG.play(392.00, now + 200);         //G
-//noteA.play(440.00, now + 250);       //A
-//noteB.play(493.88, now + 300);         //B
-
-//const soundE = new Audio('audio/noteB.wav')
-
-//soundE.play()
-//console.log(soundE)
-
