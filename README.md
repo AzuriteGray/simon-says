@@ -12,9 +12,15 @@ with just for keys or quite a bit harder with 7 notes.
 Main goal, keep it simple looking and straight forward. you can tell what button does what by looking at it
 the keyboard is modeld after a real keyboard just one octave instead of seven.
 
+Most players are familiar with the game of simon says. i have had several friends and family members
+test the game for me to give feedback on the looks and gameplay to make sure it was pleasing to the eye
+and make sure there was nothing too confusing in it.
+
 wireframe:
-- [sketch] ()
-- [wireframe] ()
+
+[initial sketch](https://github.com/AzuriteGray/simon-says/blob/master/assets/Wireframe/Sketch.jpg)
+
+[final design](https://github.com/AzuriteGray/simon-says/blob/master/assets/Wireframe/keyboard%20website.png)
 
 
 ## Features
@@ -26,7 +32,9 @@ wireframe:
 
 ## Technologies used
 
-I have used google fonts for the font used inside of the display
+everything has been programmed on AWScloud9
+
+I have used the teko font from the GoogleFonts API
 
 other than that its all base html, css and javascript
 
@@ -39,12 +47,16 @@ the code has been checked and validated with
 
 ## Deployment
 
-I have live deployed my project only on GitHub at https://azuritegray.github.io/simon-says/
+I have live deployed my project only on  [Github](https://azuritegray.github.io/simon-says/)
 there is no diffrences between the develepoment and the deployed version of the website
 
 ## Credits
 
-sound files from https://freesound.org/
+all coding for javascript done by me
+
+special thanks to my mentor maranatha for helping me with my coding problems
+
+sound files from [freesound](https://freesound.org/) from user pinkyfinger
 
 
 CSS piano base inspiration taken from https://codepen.io/Eliteware/pen/wDHIC
