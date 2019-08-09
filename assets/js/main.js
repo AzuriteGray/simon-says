@@ -12,13 +12,20 @@ let difficulty = Vhard ;
 var lives = 3;
 
 const display = document.querySelector("#display");
-const keyC = document.querySelector("#noteC");
-const keyD = document.querySelector("#noteD");
-const keyE = document.querySelector("#noteE");
-const keyF = document.querySelector("#noteF");
-const keyG = document.querySelector("#noteG");
-const keyA = document.querySelector("#noteA");
-const keyB = document.querySelector("#noteB");
+const keyboardC = document.querySelector("#noteC");
+const keyboardD = document.querySelector("#noteD");
+const keyboardE = document.querySelector("#noteE");
+const keyboardF = document.querySelector("#noteF");
+const keyboardG = document.querySelector("#noteG");
+const keyboardA = document.querySelector("#noteA");
+const keyboardB = document.querySelector("#noteB");
+const keyC = new Audio("assets/audio/noteC.wav");
+const keyD = new Audio("assets/audio/noteD.wav");
+const keyE = new Audio("assets/audio/noteE.wav");
+const keyF = new Audio("assets/audio/noteF.wav");
+const keyG = new Audio("assets/audio/noteG.wav");
+const keyA = new Audio("assets/audio/noteA.wav");
+const keyB = new Audio("assets/audio/noteB.wav");
 const startButton = document.querySelector("#start");
 const easyButton = document.querySelector("#easy");
 const normalButton = document.querySelector("#normal");
@@ -29,21 +36,18 @@ const note5 = document.querySelector("#normal");
 const note6 = document.querySelector("#hard");
 const note7 = document.querySelector("#veryHard");
 const keys = {
-    noteA: {color:"#4B0082", clip:"assets/audio/noteA.wav"},
-    noteB: {color:"#8B00FF", clip:"assets/audio/noteB.wav"},
-    noteC: {color:"#FF0000", clip:"assets/audio/noteC.wav"},
-    noteD: {color:"#FF7F00", clip:"assets/audio/noteD.wav"},
-    noteE: {color:"#FFFF00", clip:"assets/audio/noteE.wav"},
-    noteF: {color:"#00FF00", clip:"assets/audio/noteF.wav"},
-    noteG: {color:"#0000FF", clip:"assets/audio/noteG.wav"},
+    noteA: {color:"#4B0082"},
+    noteB: {color:"#8B00FF"},
+    noteC: {color:"#FF0000"},
+    noteD: {color:"#FF7F00"},
+    noteE: {color:"#FFFF00"},
+    noteF: {color:"#00FF00"},
+    noteG: {color:"#0000FF"},
 };
-
-
 
 startButton.addEventListener('click', (event) => {
       play();
 });
-
 
 //dificulty selector
 
@@ -93,7 +97,6 @@ function Vhard () {
    }
 }
 
-
 function play(){
    gameStarted=true;
    win = false;
@@ -139,77 +142,76 @@ function gameTurn() {
         clearColor();
         setTimeout(() => {
             if (order[flash] == 1) {
-                const {color, clip } = keys.noteC;
-                notePressSucsess(keyC,color,clip);
+                const {color} = keys.noteC;
+                notePressSucsess(keyC,color,keyboardC);
             }
             if (order[flash] == 2) {
-                const {color, clip } = keys.noteD;
-                notePressSucsess(keyD,color,clip);
+                const {color } = keys.noteD;
+                notePressSucsess(keyD,color,keyboardD);
             }
             if (order[flash] == 3) {
-                const {color, clip } = keys.noteE;
-                notePressSucsess(keyE,color,clip);
+                const {color } = keys.noteE;
+                notePressSucsess(keyE,color,keyboardE);
             }
             if (order[flash] == 4) {
-                const {color, clip } = keys.noteF;
-                notePressSucsess(keyF,color,clip);
+                const {color } = keys.noteF;
+                notePressSucsess(keyF,color,keyboardF);
             }
             if (order[flash] == 5) {
-                const {color, clip } = keys.noteG;
-                notePressSucsess(keyG,color,clip);
+                const {color } = keys.noteG;
+                notePressSucsess(keyG,color,keyboardG);
             }
             if (order[flash] == 6) {
-                const {color, clip } = keys.noteA;
-                notePressSucsess(keyA,color,clip);
+                const {color} = keys.noteA;
+                notePressSucsess(keyA,color,keyboardA);
             }
             if (order[flash] == 7) {
-                const {color, clip } = keys.noteB;
-                notePressSucsess(keyB,color,clip);
+                const {color} = keys.noteB;
+                notePressSucsess(keyB,color,keyboardB);
             }
             flash++;
         }, 200);
     }
 }
 
-function notePressSucsess(note,color,clip) {
-    let audio= new Audio(clip);
-    audio.play();
-    note.style.backgroundColor = color;
+function notePressSucsess(note,color,key) {
+    note.play();
+   key.style.backgroundColor = color;
     
 }
 
 //pressed key colors
 
 function clearColor() {
-     keyC.style.backgroundColor = "#f5f5f5";
-     keyD.style.backgroundColor = "#f5f5f5";
-     keyE.style.backgroundColor = "#f5f5f5";
-     keyF.style.backgroundColor = "#f5f5f5";
-     keyG.style.backgroundColor = "#f5f5f5";
-     keyA.style.backgroundColor = "#f5f5f5";
-     keyB.style.backgroundColor = "#f5f5f5";
+     keyboardC.style.backgroundColor = "#f5f5f5";
+     keyboardD.style.backgroundColor = "#f5f5f5";
+     keyboardE.style.backgroundColor = "#f5f5f5";
+     keyboardF.style.backgroundColor = "#f5f5f5";
+     keyboardG.style.backgroundColor = "#f5f5f5";
+     keyboardA.style.backgroundColor = "#f5f5f5";
+     keyboardB.style.backgroundColor = "#f5f5f5";
  }
  
 function flashColor() {
-     keyC.style.backgroundColor = "#FF0000";
-     keyD.style.backgroundColor = "#FF7F00";
-     keyE.style.backgroundColor = "#FFFF00";
-     keyF.style.backgroundColor = "#00FF00";
-     keyG.style.backgroundColor = "#0000FF";
-     keyA.style.backgroundColor = "#4B0082";
-     keyB.style.backgroundColor = "#8B00FF";
+     keyboardC.style.backgroundColor = "#FF0000";
+     keyboardD.style.backgroundColor = "#FF7F00";
+     keyboardE.style.backgroundColor = "#FFFF00";
+     keyboardF.style.backgroundColor = "#00FF00";
+     keyboardG.style.backgroundColor = "#0000FF";
+     keyboardA.style.backgroundColor = "#4B0082";
+     keyboardB.style.backgroundColor = "#8B00FF";
  }
 
 
 //player pressing keys
 
-keyC.addEventListener('click', (event) => {
+keyboardC.addEventListener('click', (event) => {
     if (gameStarted) {
-    const { color, clip } = keys.noteC;
+    const { color} = keys.noteC;
     if (on) {
         playerOrder.push(1);
         check();
-        notePressSucsess(keyC,color,clip);
+        notePressSucsess(keyC,color,keyboardC);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -219,13 +221,13 @@ keyC.addEventListener('click', (event) => {
     }
 });
 
-keyD.addEventListener('click', (event) => {
+keyboardD.addEventListener('click', (event) => {
     if (gameStarted) {
-    const { color, clip } = keys.noteD;
+    const { color} = keys.noteD;
     if (on) {
         playerOrder.push(2);
         check();
-        notePressSucsess(keyD,color,clip);
+        notePressSucsess(keyD,color,keyboardD);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -235,13 +237,13 @@ keyD.addEventListener('click', (event) => {
     }
 });
 
-keyE.addEventListener('click', (event) => {
+keyboardE.addEventListener('click', (event) => {
     if (gameStarted) {
-    const { color, clip } = keys.noteE;
+    const { color } = keys.noteE;
     if (on) {
         playerOrder.push(3);
         check();
-        notePressSucsess(keyE,color,clip);
+        notePressSucsess(keyE,color,keyboardE);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -251,13 +253,13 @@ keyE.addEventListener('click', (event) => {
     }
 });
 
-keyF.addEventListener('click', (event) => {
+keyboardF.addEventListener('click', (event) => {
     if (gameStarted) {
-     const { color, clip } = keys.noteF;
+     const { color} = keys.noteF;
     if (on) {
         playerOrder.push(4);
         check();
-        notePressSucsess(keyF,color,clip);
+        notePressSucsess(keyF,color,keyboardF);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -267,13 +269,13 @@ keyF.addEventListener('click', (event) => {
     }
 });
 
-keyG.addEventListener('click', (event) => {
+keyboardG.addEventListener('click', (event) => {
     if (gameStarted) {
-    const { color, clip } = keys.noteG;
+    const { color} = keys.noteG;
     if (on) {
         playerOrder.push(5);
         check();
-        notePressSucsess(keyG,color,clip);
+        notePressSucsess(keyG,color,keyboardG);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -283,13 +285,13 @@ keyG.addEventListener('click', (event) => {
     }
 });
 
-keyA.addEventListener('click', (event) => {
+keyboardA.addEventListener('click', (event) => {
     if (gameStarted) {
-     const { color, clip } = keys.noteA;
+     const { color} = keys.noteA;
     if (on) {
         playerOrder.push(6);
         check();
-        notePressSucsess(keyA,color,clip);
+        notePressSucsess(keyA,color,keyboardA);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -299,13 +301,13 @@ keyA.addEventListener('click', (event) => {
     }
 });
 
-keyB.addEventListener('click', (event) => {
+keyboardB.addEventListener('click', (event) => {
     if (gameStarted) {
-     const { color, clip } = keys.noteB;
+     const { color} = keys.noteB;
     if (on) {
         playerOrder.push(7);
         check();
-        notePressSucsess(keyB,color,clip);
+        notePressSucsess(keyB,color,keyboardB);
         if(!win) {
             setTimeout(() =>{
                 clearColor();
@@ -339,11 +341,11 @@ function check() {
                 flash =0;
                 playerOrder =[];
                 good =true;
-                intervalId = setInterval(gameTurn, 800);
+                intervalId = setInterval(gameTurn, 1300);
             } else {
                 gameover();
             }
-        },800);
+        },1200);
     }
     
     if (turn == playerOrder.length && good && !win) {
