@@ -26,9 +26,22 @@ wireframe:
 ## Features
 
 
-- the option to choose how many keys are in use between 4 and 7
+- the option to choose how many keys are in use
+
+4 simple buttons labeld with the numbers 4 trough 7 notes to make it simple and 
+easy to select how many you would like to use
 - the color coding of the keys
+
+each key has its own unique color to make sure you can play the game without any sound
+and making it easier to tell them apart in case you press wrong 
+- all keys lighting up when selecting the wrong key
+
+to help out so you can see wich key it was seposed to be and wich color is where
+
 - diffrent sound effects per key
+
+to ensure that each key is easy to tell apart by listening they are all notes from A to G from a keyboard
+in the same order they would apear on one
 
 ## Technologies used
 
@@ -45,9 +58,19 @@ the code has been checked and validated with
 - [W3C html validator](https://validator.w3.org/)
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator.html.en)
 
+the website itself was tested by myself and friends of mine to ensure that the colors and sound lined up perfectly
+with a click and when the computer is pressing them.
+
+
 ## Deployment
 
 I have live deployed my project only on  [Github](https://azuritegray.github.io/simon-says/)
+1. On Github navigate to sneachda/portfolio-milestone-1
+2. From the menu at the top click on settings
+3. Scroll down to the GitHub pages section
+4. Under Source section click on dropdown menu and select Master Branch as your GitHub pages publishing source.
+5. Select save.
+
 there is no diffrences between the develepoment and the deployed version of the website
 
 ## Credits

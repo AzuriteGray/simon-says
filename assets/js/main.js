@@ -177,7 +177,6 @@ function gameTurn() {
 function notePressSucsess(note,color,key) {
     note.play();
    key.style.backgroundColor = color;
-    
 }
 
 //pressed key colors
@@ -341,11 +340,11 @@ function check() {
                 flash =0;
                 playerOrder =[];
                 good =true;
-                intervalId = setInterval(gameTurn, 1300);
+                intervalId = setInterval(gameTurn, 800);
             } else {
                 gameover();
             }
-        },1200);
+        },800);
     }
     
     if (turn == playerOrder.length && good && !win) {
